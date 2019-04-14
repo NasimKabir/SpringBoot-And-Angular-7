@@ -1,0 +1,20 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink=''>EMPM</a>
+    <ul class="navbar-nav">
+      <li class="navbar-item">
+        <a *ngIf="auth.isUserlogin()" routerLink='' class="nav-link">Home</a>
+      </li>
+      <li class="navbar-item">
+        <a *ngIf="auth.isUserlogin()" routerLink='/employee-list' class="nav-link">EmployeeList</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+        <li class="navbar-item" >
+          <a *ngIf="!auth.isUserlogin()" routerLink="/login" class="nav-link">Login</a>
+        </li>
+        <li class="navbar-item">
+          <a *ngIf="auth.isUserlogin()" routerLink="/logout" class="nav-link">Logout</a>
+        </li>
+      </ul>
+  </nav>

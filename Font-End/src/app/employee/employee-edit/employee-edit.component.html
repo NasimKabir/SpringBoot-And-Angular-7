@@ -1,0 +1,21 @@
+<div class="container">
+<!--template variable = #....name-->
+  <form (ngSubmit)='!employeeForm.invalid && saveEmployee()' #employeeForm="ngForm">
+    <fieldset class="form-group">
+      <label>FirstName</label>
+      <input type="text" [(ngModel)]="employee.firstName" class="form-control" name="firstName" required>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label> LastName</label>
+      <input type=" text" [(ngModel)]="employee.lastName" class="form-control" name="lastName" required>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label>Email</label>
+      <input type=" email" [(ngModel)]="employee.email" class="form-control" name="email" required>
+    </fieldset>
+
+    <button type="submit" class=" btn btn-success" >save</button>
+  </form>
+</div>
